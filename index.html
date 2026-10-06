@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My Favorite Person ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow: hidden;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 25px;
+        }
+
+        h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+            animation: muncul 2s ease;
+        }
+
+        .subtitle {
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        .foto {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid white;
+            box-shadow: 0 0 30px rgba(255,255,255,0.8);
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #ff4f81;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        #pesan {
+            margin-top: 25px;
+            font-size: 20px;
+            min-height: 30px;
+        }
+
+        .heart {
+            position: fixed;
+            bottom: -20px;
+            font-size: 25px;
+            animation: naik 5s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes naik {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-110vh) scale(1.8);
+                opacity: 0;
+            }
+        }
+
+        @keyframes floating {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* HALAMAN KEJUTAN */
+
+        #surprise {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            z-index: 10;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        #surprise h2 {
+            font-size: 45px;
+            animation: muncul 1s ease;
+        }
+
+        #surprise p {
+            font-size: 20px;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+
+        .big-heart {
+            font-size: 90px;
+            animation: detak 0.8s infinite;
+        }
+
+        @keyframes detak {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.3);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MUSIK -->
+    <audio id="musik" loop>
+        <source src="ssstik.io_1791229462068 (1).mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+
+        <h1>Hai, Sayang ❤️</h1>
+
+        <p class="subtitle">
+            Ada seseorang yang mau bilang sesuatu ke kamu...
+        </p>
+
+        <!-- GANTI FOTO DI SINI -->
+        <img src="WhatsApp Image 2026-10-06 at 17.01.52.jpeg" class="foto">
+
+        <br>
+
+        <button onclick="love()">
+            I LOVE YOU ❤️
+        </button>
+
+        <p id="pesan"></p>
+
+    </div>
+
+    <!-- HALAMAN KEJUTAN -->
+    <div id="surprise">
+
+        <div>
+            <div class="big-heart">❤️</div>
+
+            <h2>I LOVE YOU!</h2>
+
+            <p>
+                Kalau kamu sampai di sini...
+                berarti kamu berhasil membuka rahasia kecilku 😭❤️
+                <br><br>
+
+                Aku mungkin nggak selalu sempurna,
+                tapi aku selalu punya alasan buat tetap memilih kamu.
+                Untuk kamu, orang yang paling aku sayang ❤️ Aku mungkin nggak selalu bisa jadi seseorang yang sempurna buat kamu. Kadang aku salah, kadang aku bikin kamu kesel, bahkan mungkin tanpa sadar bikin kamu kecewa. Tapi satu hal yang selalu aku tahu, aku nggak pernah main-main soal perasaanku ke kamu. 
+                Terima kasih karena sudah hadir di hidup aku. Terima kasih sudah mau bertahan, mau memahami aku, dan sudah menjadi salah satu alasan kenapa hari-hariku terasa lebih berarti. 
+                Aku nggak tahu nanti kita akan sejauh apa, tapi selama masih diberi kesempatan, aku ingin terus berjalan sama kamu.
+                Aku nggak janji semuanya akan selalu indah, tapi aku janji akan selalu berusaha untuk tetap ada, menjaga kamu, dan menghargai setiap momen yang kita punya.
+                Kalau suatu hari kamu bertanya kenapa aku memilih kamu, jawabannya sederhana... karena dari sekian banyak orang, hatiku merasa paling nyaman ketika bersamamu. 🥹❤️
+                I love you sayang. Hari ini, besok, dan semoga sampai nanti. ❤️
+                <br><br>
+
+                <b>Dan alasannya adalah kamu. 🥹❤️</b>
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+
+        // HATI TERBANG
+        function buatHati() {
+
+            const heart = document.createElement("div");
+
+            heart.classList.add("heart");
+
+            heart.innerHTML = ["❤️","💗","💕","💖","💘"][Math.floor(Math.random() * 5)];
+
+            heart.style.left = Math.random() * 100 + "vw";
+
+            heart.style.animationDuration =
+                (Math.random() * 3 + 3) + "s";
+
+            heart.style.fontSize =
+                (Math.random() * 20 + 15) + "px";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+
+        setInterval(buatHati, 300);
+
+
+        // TOMBOL I LOVE YOU
+        function love() {
+
+            const musik = document.getElementById("musik");
+
+            musik.play().catch(() => {});
+
+            const pesan = document.getElementById("pesan");
+
+            pesan.innerHTML =
+                "Aku sayang kamu lebih dari yang bisa aku tulis di sini... ❤️";
+
+            setTimeout(() => {
+
+                document.getElementById("surprise").style.display = "flex";
+
+                // Tambahkan banyak hati saat kejutan
+                for(let i = 0; i < 50; i++) {
+                    setTimeout(buatHati, i * 50);
+                }
+
+            }, 2500);
+        }
+
+    </script>
+
+</body>
+</html>
